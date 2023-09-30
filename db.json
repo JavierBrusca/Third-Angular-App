@@ -1,0 +1,23 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Sergio"
+    }, 
+    {
+      "id": 2,
+      "nombre": "Estela"
+    }, 
+    {
+      "id": 3,
+      "nombre": "Susuna"
+    },
+    {
+      "id":4,
+      "host": "http://localhost:3000/usuarios"
+
+    }
+    
+  ]
+
+}
