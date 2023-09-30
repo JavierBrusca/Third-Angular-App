@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpService } from '../services/http.service';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  usuarios: any[]=[];
 
-  constructor() {}
+
+  constructor(private http: HttpService) {}
+
+  cargarUsuarios(){
+    this.http.loadUsers().subscribe(
+      (res:any)=>{
+        this.usuarios=res.results;
+      },
+      (error)=>{
+        console.log(error);
+      }
+    )
+  }
 
 }
